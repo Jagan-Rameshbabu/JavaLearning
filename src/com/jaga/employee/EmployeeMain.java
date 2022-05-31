@@ -11,5 +11,7 @@ public class EmployeeMain {
   public static void main(String[] args) {
 
     EmployeeData.getAllEmployees().forEach(System.out::println);
+
+    EmployeeData.getAllEmployees().stream().map(Employee::getEmployeeAge).count();
   }
 }
